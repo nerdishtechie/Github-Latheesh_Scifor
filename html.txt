@@ -1,0 +1,33 @@
+The program to create a web page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Hello to all the frontend aspirants</h3>
+</body>
+</html>
+
+HTML Features:
+
+It is easy to learn and easy to use.
+It is platform-independent.
+Images, videos, and audio can be added to a web page.
+Hypertext can be added to the text.
+It is a markup language.
+
+MIME:
+
+MIME (Multipurpose Internet Mail Extensions) is an extension of the original Simple Mail Transport Protocol (SMTP) email protocol. It lets users exchange different kinds of data files, including audio, video, images and application programs, over email.
+
+HTML:
+
+Hyper Text Markup Language
+
+Void elements in HTML:
+
+A void element is an element in HTML that cannot have any child nodes (i.e., nested elements or text nodes). Void elements only have a start tag; end tags must not be specified for void elements. In HTML, a void element must not have an end tag.
