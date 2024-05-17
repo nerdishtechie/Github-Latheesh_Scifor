@@ -1,0 +1,38 @@
+1. CSS: Cascading Style Sheets. 
+     The different types of selectors are id selector, class selector, tag selector, universal selector etc.
+2. CSS Box Model: If we consider an element like h1 or paragraph or something like content, the area around the content is padding, the border is the thick line surrounding the padding and the margin is the space around the border.
+3. Student Registration form
+ <h3>Student Registration Form</h3>  
+  <form action="">
+    <label for="">First Name</label>
+    <br>
+    <input type="first name">
+    <br>
+    <label for="">Middle Name</label>
+    <br>
+    <input type="middle name">
+    <br>
+    <label for="">Last Name</label>
+    <br>
+    <input type="last name">
+  
+  <h3>Select the course</h3>
+  <select name="" id="">
+    <option value="">BA</option>
+    <option value="">BSc</option>
+    <option value="">BCom</option>
+  </select>
+  <h3>Select your gender</h3>
+ 
+    
+  <input type="radio" name="gender" id="male">
+  <label for="">male</label>
+  <input type="radio" name="gender" id="female">
+  <label for="">female</label>
+  <br><br>
+  <button type="submit">Submit</button>
+  
+  <button type="reset">Reset</button>
+</form>
+4. There are three types of lists in html, the ordered list, the unordered list and the definition list. The ordered list contains numbering, the unordered list contains bullets and the definition list is used to define something.
+
