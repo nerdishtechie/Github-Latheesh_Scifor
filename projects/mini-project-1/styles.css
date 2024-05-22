@@ -1,0 +1,100 @@
+body{
+    background-color: aqua;
+}
+header h1 a{
+    font-size: 50px;
+    color:blueviolet;
+    text-decoration: none;
+}
+section{
+    
+    display: flex;
+    justify-content: space-between; 
+    align-items: flex-start; 
+    gap: 10px; 
+    padding: 10px;
+    flex-wrap: wrap;
+
+}
+.card{
+    background-color:burlywood;
+    padding: 20x;
+    border: 1px solid #ccc;
+    flex:calc(16%);
+    max-width: 40%; 
+    
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+
+}
+.card img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+    padding:5px
+}
+.card-img{
+    width: 95%;
+    height: 300px;
+    overflow: hidden; 
+    margin-bottom: 10px;
+}
+.info{
+    padding:0;
+}
+nav a{
+    text-decoration: none;
+    font-size: 30px;
+    margin:10px;
+}
+header{
+    display:flex;
+    align-items: center;
+    gap:150px;
+}
+button{
+    cursor: pointer;
+    padding:5px;
+    margin:5px;
+    background-color: yellow;
+    border-radius: 5px;
+    color:green;
+}
+#contact{
+    text-align: center;
+}
+#contact h1{
+    font-size: 50px;
+}
+form{
+    font-size: 20px;
+}
+input{
+    height: 20px;
+    width: 600px;
+    border-radius: 5px;
+    border-color: rgb(247, 241, 241);
+}
+textarea{
+    height: 70px;
+    width: 600px;
+    border-radius: 10px;
+    border-color: rgb(247, 241, 241);
+}
+form button{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: green;
+    color:#ccc;
+    font-size: 15px;
+}
+.info h2{
+  color:crimson;  
+}
+.info p{
+ color:darkmagenta;
+}
