@@ -1,0 +1,38 @@
+1. <b>, <strong>, <em> etc which are bold, strong, italic etc tags which format the text in html are called formatting tags in html.
+2. To merge two rows or columns into single row and column we can use rowspan or colspan.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th colspan="2">Andhra Pradesh</th>
+            <th>Tamilnadu</th>
+            <!-- <th>Karnataka</th> -->
+        </tr>
+        <tr>
+            <td>Telugu</td>
+            <td>Tamil</td>
+            <td>Kannada</td>
+        </tr>
+        <tr>
+            <td>Vijayawada</td>
+            <td>Chennai</td>
+            <td>Bengaluru</td>
+        </tr>
+    </table>
+</body>
+</html>
+3. Cell spacing means providing space between two cells whereas Cell padding means providing space around the content and within the border of the cell.
+4. Semantic elements in HTML means the elements which are meaningful. For example 
+<h1> means heading1, <p> means paragraph <table> is to create a table etc.
+5. Program to insert background image in html is:
+body{
+    background-image: url('cat.jpg');
+}
+6. Alt attribute in html indicates alternative text to an image, it means for suppose the text will appear alternatively if the image does not load for any reason.
