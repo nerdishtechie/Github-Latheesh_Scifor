@@ -1,0 +1,330 @@
+TEST 4:
+
+1.CREATE A NAVIGATION BAR USING FLEXBOX THAT HAS THE FOLLOWING STRUCTURE
+A.CENTER-ALIGNED NAVIGATION LINKS.(HOME ,ABOUT,ADDRESS, CONTACT)
+B.A SEARCH BAR AND A USER PROFILE ICON ON THE RIGHT.
+C.FOOTER
+
+solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            font-size: 50px;
+            color:blueviolet;
+        }
+        h1{
+            display:inline;
+        }
+        nav{
+            display:inline;
+            margin-left: 100px;;
+        }
+        a{
+            text-decoration: none;
+            font-size: 30px;
+            margin:10px;
+            
+        }
+        .search-bar{
+            display:inline;
+            margin-left: 30px;
+            
+        }
+        input{
+            width:300px;
+            border-radius: 3px;
+            height:20px;
+        }
+        .search{
+            background-color: green;
+            color:white;
+            border-radius: 3px;
+            height:25px;
+        }
+        .profile-container {
+            position: absolute;
+            top: 25px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #007BFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile-name {
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        p{
+            font-size: 20px;;
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+    <h1>My Website</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Address</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        
+        <button class="search">Search</button>
+    </div>
+    <div class="profile-container">
+        <div class="profile-icon">U</div>
+        <div class="profile-name">User Name</div>
+    </div>
+</header>
+<section>
+    <h2 style="color:darkmagenta">About us</h2>
+    
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores tenetur reiciendis quaerat. Porro cupiditate similique dolores molestias, iure amet iusto ullam ex, tempora a, illo laudantium. Quibusdam libero, eum beatae ipsam eligendi consectetur hic placeat laudantium similique magnam voluptatum? Molestiae in sapiente asperiores quam reiciendis eveniet quibusdam! Praesentium corporis, nisi ipsam deserunt voluptate consequatur, quas mollitia recusandae enim aperiam veritatis, id earum dolore alias magnam! Adipisci magnam qui quo, eius vitae doloremque placeat cumque, soluta est similique incidunt eum. Autem ipsum, delectus esse repellendus doloremque ducimus fugit minus harum. Laudantium nesciunt earum delectus veniam dicta. A consequuntur nulla tempora, amet libero non quisquam, dolorum sed accusamus eum totam? Distinctio dolorum accusantium nesciunt placeat quisquam eligendi quod debitis culpa id iure. Veniam dignissimos magni cumque optio, recusandae error repellat facere tenetur sunt quam illum dicta nisi dolorum officia aliquam maxime doloribus inventore temporibus consectetur eius totam eaque nobis quidem sint? Dolores quae facere, nulla laborum quibusdam placeat maxime sapiente neque iure quos sint odio autem officiis consequuntur aliquam aspernatur eaque eius, hic dolorum fugiat explicabo ipsam culpa libero ducimus? Doloremque natus velit, veritatis dolorum mollitia aut maxime quae laborum commodi dolorem autem laudantium laboriosam incidunt minus officiis sequi aperiam excepturi, consequatur iure, necessitatibus expedita consectetur totam. Voluptatibus magnam distinctio dolor, quasi debitis dolorum ea neque facere tenetur, nihil aperiam eveniet reprehenderit accusamus omnis illum totam quisquam tempore ducimus voluptates deserunt atque quam? Dolorum, expedita id placeat tempore, suscipit ipsam accusamus, nulla qui perferendis quod repellendus a numquam minima dicta vitae. Quos quod adipisci amet neque vitae voluptatem aut consequuntur fuga hic, aspernatur sunt quam quidem pariatur, accusantium quo soluta maiores nisi quae velit totam, asperiores necessitatibus rem. Explicabo facilis at ut laborum error. Reprehenderit distinctio incidunt omnis enim atque deleniti minus ut quae? Optio aliquam ab magni delectus reiciendis laborum.</p>
+</section>
+<footer>
+    <p style="color:blueviolet">&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+
+
+
+
+
+2.CREATE AN HTML TABLE TO DISPLAY A LIST OF PRODUCTS. THE TABLE SHOULD INCLUDE COLUMNS FOR PRODUCT NAME, PRICE, AND QUANTITY.ADD A FOOTER ROW TO THE TABLE THAT DISPLAYS THE TOTAL PRICE OF ALL PRODUCTS. (CALCULATE THE TOTALMANUALLY)
+
+solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+    <style>
+        body{
+            background-color: chartreuse;
+        }
+        table{
+            border-color: blueviolet;
+        }
+       
+
+    </style>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Unit Price</th>
+            <th>Quantity</th>
+        </tr>
+        <tr>
+            <td>Pen</td>
+            <td>Rs.10</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Pencil</td>
+            <td>Rs.5</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Eraser</td>
+            <td>Rs.3</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Sharpener</td>
+            <td>Rs.3</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Ruler</td>
+            <td>Rs.20</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Short notes</td>
+            <td>Rs.30</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Long notes</td>
+            <td>Rs.50</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Geometry box</td>
+            <td>Rs.60</td>
+            <td>10</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td>Rs.1810</td>
+            <td>80</td>
+        </tr>
+       
+    </table>
+</body>
+</html>
+
+3.DESIGN A RESPONSIVE WEBPAGE USING MEDIA QUERIES TO OPTIMIZE THE LAYOUT AND STYLING FOR DIFFERENT SCREEN SIZES. YOUR WEBPAGE SHOULD INCLUDE THE FOLLOWING COMPONENTS:HEADER,NAVIGATION MENU,CONTENT SECTION &FOOTER.
+
+solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <style>
+        body{
+            background-color: aqua;
+        }
+        h1{
+            font-size: 50px;
+            color:blueviolet;
+        }
+        h1{
+            display:inline;
+        }
+        nav{
+            display:inline;
+            margin-left: 100px;;
+        }
+        a{
+            text-decoration: none;
+            font-size: 30px;
+            margin:10px;
+            
+        }
+        .search-bar{
+            display:inline;
+            margin-left: 30px;
+            
+        }
+        input{
+            width:300px;
+            border-radius: 3px;
+            height:20px;
+        }
+        .search{
+            background-color: green;
+            color:white;
+            border-radius: 3px;
+            height:25px;
+        }
+        .profile-container {
+            position: absolute;
+            top: 25px;
+            right: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .profile-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #007BFF;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .profile-name {
+            margin-left: 10px;
+            font-size: 16px;
+            font-weight: normal;
+        }
+        p{
+            font-size: 20px;
+        }
+        @media screen and (max-width:600px) {
+            h1{
+                font-size: 40px;
+            }
+            nav{
+                margin-left:0;
+                display:block;
+                
+            }
+            a{
+                font-size: 20px;
+                display:block;
+            }
+            input{
+                margin-left: 0px;
+                width:100px;
+            }
+            h2{
+                font-size: 20px;
+            }
+            p{
+            width:220px;
+            text-align:justify;
+        }
+
+            
+        }
+       
+       
+       
+       
+    </style>
+</head>
+<body>
+    <header>
+    <h1>My Website</h1>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Address</a>
+        <a href="#">Contact</a>
+    </nav>
+    <div class="search-bar">
+        <input type="text" placeholder="Search...">
+        
+        <button class="search">Search</button>
+    </div>
+    <div class="profile-container">
+        <div class="profile-icon">U</div>
+        <div class="profile-name">User Name</div>
+    </div>
+</header>
+<section>
+    <h2 style="color:darkmagenta">About us</h2>
+    
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque dolores tenetur reiciendis quaerat. Porro cupiditate similique dolores molestias, iure amet iusto ullam ex, tempora a, illo laudantium. Quibusdam libero, eum beatae ipsam eligendi consectetur hic placeat laudantium similique magnam voluptatum? Molestiae in sapiente asperiores quam reiciendis eveniet quibusdam! Praesentium corporis, nisi ipsam deserunt voluptate consequatur, quas mollitia recusandae enim aperiam veritatis, id earum dolore alias magnam! Adipisci magnam qui quo, eius vitae doloremque placeat cumque, soluta est similique incidunt eum. Autem ipsum, delectus esse repellendus doloremque ducimus fugit minus harum. Laudantium nesciunt earum delectus veniam dicta. A consequuntur nulla tempora, amet libero non quisquam, dolorum sed accusamus eum totam? Distinctio dolorum accusantium nesciunt placeat quisquam eligendi quod debitis culpa id iure. Veniam dignissimos magni cumque optio, recusandae error repellat facere tenetur sunt quam illum dicta nisi dolorum officia aliquam maxime doloribus inventore temporibus consectetur eius totam eaque nobis quidem sint? Dolores quae facere, nulla laborum quibusdam placeat maxime sapiente neque iure quos sint odio autem officiis consequuntur aliquam aspernatur eaque eius, hic dolorum fugiat explicabo ipsam culpa libero ducimus? Doloremque natus velit, veritatis dolorum mollitia aut maxime quae laborum commodi dolorem autem laudantium laboriosam incidunt minus officiis sequi aperiam excepturi, consequatur iure, necessitatibus expedita consectetur totam. Voluptatibus magnam distinctio dolor, quasi debitis dolorum ea neque facere tenetur, nihil aperiam eveniet reprehenderit accusamus omnis illum totam quisquam tempore ducimus voluptates deserunt atque quam? Dolorum, expedita id placeat tempore, suscipit ipsam accusamus, nulla qui perferendis quod repellendus a numquam minima dicta vitae. Quos quod adipisci amet neque vitae voluptatem aut consequuntur fuga hic, aspernatur sunt quam quidem pariatur, accusantium quo soluta maiores nisi quae velit totam, asperiores necessitatibus rem. Explicabo facilis at ut laborum error. Reprehenderit distinctio incidunt omnis enim atque deleniti minus ut quae? Optio aliquam ab magni delectus reiciendis laborum.</p>
+</section>
+<footer>
+    <p style="color:blueviolet">&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+</body>
+</html>
+
+4.CREATE AN HTML FORM WITH USERNAME, PASSWORD FIELDS. APPLY VALIDATION: USERNAME ≥ 4 CHARACTERS, PASSWORD ≥ 8 CHARACTERS. STYLE FORM WITH CSS.
