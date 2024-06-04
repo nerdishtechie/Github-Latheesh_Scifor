@@ -1,0 +1,65 @@
+ASSIGNMENT 3
+
+CREATE AN HTML FORM WITH USERNAME,LASTNAME, PASSWORD FIELDS. APPLY VALIDATION: USERNAME ≥ 4 CHARACTERS, PASSWORD ≥ 8 CHARACTERS. STYLE FORM WITH CSS.(USE EXTERNAL STYLE SHEETS FOR CSS)
+
+solution:
+
+<!-- CREATE AN HTML FORM WITH USERNAME,LASTNAME, PASSWORD FIELDS. APPLY VALIDATION: USERNAME ≥ 4 CHARACTERS, PASSWORD ≥ 8 CHARACTERS. STYLE FORM WITH CSS.(USE EXTERNAL STYLE SHEETS FOR CSS) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML FORM</title>
+    <style>
+        body{
+            background-color:lightcoral;
+            
+        }
+        .container{
+            display: flex;
+  justify-content: center;
+  align-items: center;
+        }
+        h1{
+         text-align: center;
+         font-size: 50px;
+        }
+        input{
+            height:20px;
+            width:200px;
+            border-radius: 5px;
+        }
+        button{
+            background-color: aqua;
+            color:black;
+            border-radius: 5px;
+            height:25px;
+            
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Register here</h1>
+    <div class="container">
+    <form action="">
+        <input type="text" minlength="4" placeholder="Username..." required>
+        <br>
+        <br>
+        <input type="text" placeholder="firstname..." required>
+        <br>
+        <br>
+        <input type="text" placeholder="lastname..." required>
+        <br>
+        <br>
+        <input type="password"
+        minlength="8" placeholder="password..." required>
+        <br>
+        <br>
+        <button type="submit">Submit</button>
+
+    </form>
+</div>
+</body>
+</html>
