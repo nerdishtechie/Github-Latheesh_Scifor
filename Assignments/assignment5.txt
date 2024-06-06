@@ -1,0 +1,154 @@
+1.Create an HTML file.Add a form with the following fields:
+Name (text input)
+Email (email input)
+Password (password input)
+Gender (radio buttons for Male and Female)
+Interests (checkboxes for different hobbies or interests)
+A submit button
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Form Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+</head>
+<body>
+    <div class="grid-container">
+        <h2 class="mb-4">Styled Form</h2>
+        <form>
+            <div class="grid-x grid-padding-x">
+                <div class="medium-6 cell">
+                    <label>First Name
+                        <input type="text" placeholder="Enter your first name">
+                    </label>
+                </div>
+                <div class="medium-6 cell">
+                    <label>Last Name
+                        <input type="text" placeholder="Enter your last name">
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Email address
+                        <input type="email" placeholder="Enter your email">
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Password
+                        <input type="password" placeholder="Enter your password">
+                    </label>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Gender</label>
+                    <div class="input-group">
+                        <input type="radio" name="gender" value="male" id="male"><label for="male">Male</label>
+                        <input type="radio" name="gender" value="female" id="female"><label for="female">Female</label>
+                    </div>
+                </div>
+                <div class="medium-12 cell">
+                    <label>Interests</label>
+                    <div class="input-group">
+                        <input type="checkbox" id="interest1" value="sports"><label for="interest1">Sports</label>
+                        <input type="checkbox" id="interest2" value="music"><label for="interest2">Music</label>
+                        <input type="checkbox" id="interest3" value="reading"><label for="interest3">Reading</label>
+                        <input type="checkbox" id="interest4" value="traveling"><label for="interest4">Traveling</label>
+                    </div>
+                </div>
+                <div class="medium-12 cell">
+                    <input type="checkbox" id="terms"><label for="terms">I agree to the terms and conditions</label>
+                </div>
+                <div class="medium-12 cell">
+                    <button type="submit" class="button">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+</body>
+</html>
+
+
+2.Add a table to the HTML file with the following columns:
+Name
+Email
+Gender
+Country
+Use foundation classes to style the form and the table
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foundation Table Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css">
+</head>
+<body>
+    <div class="grid-container">
+        <h2 class="mb-4">Styled Table</h2>
+        <table class="table hover stack">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Gender</th>
+                    <th>Country</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Jason Statham</td>
+                    <td>jason.statham@hotmail.com</td>
+                    <td>Male</td>
+                    <td>United Kingdom</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Scarlett Johansson</td>
+                    <td>scarlett.johansson@gmail.com</td>
+                    <td>Female</td>
+                    <td>United States</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Hugh Jackman</td>
+                    <td>hugh.jackman@yahoo.com</td>
+                    <td>Male</td>
+                    <td>Australia</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Nicole Kidman</td>
+                    <td>nicole.kidman@hotmail.com</td>
+                    <td>Female</td>
+                    <td>Australia</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Chris Hemsworth</td>
+                    <td>chris.hemsworth@gmail.com</td>
+                    <td>Male</td>
+                    <td>Australia</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Natalie Portman</td>
+                    <td>natalie.portman@yahoo.com</td>
+                    <td>Female</td>
+                    <td>Israel</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/js/foundation.min.js"></script>
+</body>
+</html>
