@@ -1,0 +1,35 @@
+create a variable for your favourite food ,color,vehicle and print it using write() and writeln()
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var food = "Biryani",
+            color = "Pink",
+            vehicle = "Rolls Royce";
+        document.write(food);
+        document.write("<br>");
+        document.write(color);
+        document.write("<br>");
+        document.write(vehicle);
+        
+    </script>
+    <pre>
+        <script>
+            document.writeln(food)
+            document.writeln(color)
+            document.writeln(vehicle)
+        </script>
+    </pre>
+</body>
+
+</html>
