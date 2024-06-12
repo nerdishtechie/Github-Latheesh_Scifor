@@ -1,0 +1,22 @@
+<!-- Declare three variables: name, age, and isStudent.Assign appropriate values to each variable: your name (as a string), your age (as a number), and whether you are a student (as a boolean). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+            let name = 'Latheesh_Shaik'
+            let age = 34
+            let isStudent = true
+
+            document.write(name)
+            document.write('<br>')
+            document.write(age)
+            document.write('<br>')
+            document.write(isStudent)
+    </script>
+</body>
+</html>
