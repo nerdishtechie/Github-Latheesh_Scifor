@@ -1,0 +1,93 @@
+Solution 1
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test6</title>
+</head>
+<body>
+    <pre>
+    <script>
+        var num1 = 10
+        var num2 = 5
+        document.writeln(num1+num2)
+        document.writeln(num1-num2)
+        document.writeln(num1*num2)
+        document.writeln(num1/num2)
+        document.writeln(num1%num2)
+    </script>
+    </pre>
+</body>
+</html>
+
+Solution: 2
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question 2</title>
+</head>
+<body>
+    <script>
+        var globalVar = "Global var";
+
+
+let globalLet = "Global let";
+
+{
+  var localVar = "Local var";
+  let localLet = "Local let";
+
+  document.write(localVar)
+  document.write('<br>')
+  document.write(localLet)
+  document.write('<br>')
+  
+
+}
+
+  document.write(globalVar)
+  document.write('<br>')
+  document.write(globalLet)
+  document.write('<br>')
+  document.write(localVar)
+  document.write('<br>')
+  document.write(localLet)
+ 
+
+  
+    </script>
+</body>
+</html>
+
+Solution 3
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre>
+    <script>
+        let a = 'hello my world'
+        let rUreligious = false
+        let b = null
+        let c
+        document.writeln(a)
+        document.writeln(rUreligious)
+        document.writeln(b)
+        document.writeln(c)
+
+
+    </script>
+    </pre>
+</body>
+</html>
+
