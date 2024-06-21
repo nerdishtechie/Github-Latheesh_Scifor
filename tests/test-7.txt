@@ -1,0 +1,103 @@
+ 1.WRITE A PROGRAM THAT DETERMINES IF A GIVEN NUMBER IS POSITIVE, NEGATIVE, OR ZERO.
+
+solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test7</title>
+</head>
+<body>
+    <script>
+        let a = prompt('enter a number: ');
+        if(a>0){
+            document.write('it is positive number')
+        }
+        else if(a<0){
+            document.write('it is negative number')
+            
+        }
+        else{
+            document.write('Entered number is zero')
+        }
+    </script>
+</body>
+</html>
+ 
+ 2.WRITE A PROGRAM USING PROMPT TO INPUT A NUMBER (1-7). USE A SWITCH STATEMENT TO PRINT THE CORRESPONDING DAY OR 'INVALID DAY' FOR NUMBERS OUTSIDE THIS RANGE.
+
+solution:
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch statement</title>
+</head>
+<body>
+    <script>
+    var day=prompt("Enter a number:");
+
+switch (day)
+{
+case '1': document.write("Monday");
+break;
+case '2': document.write("Tuesday");
+break;
+case '3': document.write("Wednesday");
+break;
+case '4': document.write("Thursday");
+break;
+case '5': document.write("Friday");
+break;
+case '6': document.write("Saturday");
+break;
+case '7': document.write("Sunday");
+break;
+default: document.write("invalid value")
+}
+
+</script>
+</body>
+</html>
+ 
+ 3.WRITE A PROGRAM THAT DETERMINES WHETHER A PERSON IS ELIGIBLE TO VOTE BASED ON THEIR AGE (VOTING AGE IS 18 OR OLDER).USING TERNARY OPERATOR.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ternary operator</title>
+</head>
+<body>
+    <script>
+        let age = prompt('Enter your age:');
+        let personType = age>= 18? 'Eligible for voting': 'Not eligible for voting';
+        document.write(personType)
+    </script>
+</body>
+</html>
+ 
+ 4.WRITE A PROGRAM TO PRINT NO 1 TO 10 USING FOR LOOP
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for (let i = 1; i <= 10; i++) {
+            document.write('<br>');
+    document.write(i);
+}
+    </script>
+</body>
+</html>
+ 
