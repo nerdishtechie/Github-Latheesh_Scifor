@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator</title>
+</head>
+<body>
+    <script>
+        function add(a, b) {
+            return a + b;
+        }
+
+        function subtract(a, b) {
+            return a - b;
+        }
+
+        function multiply(a, b) {
+            return a * b;
+        }
+
+        function divide(a, b) {
+            if (b === 0) {
+                return 'Division by zero is not allowed.';
+            }
+            return a / b;
+        }
+
+        let c = parseFloat(prompt('Enter the first value'));
+        let d = parseFloat(prompt('Enter the second value'));
+        let e = prompt('Enter the operation (add, subtract, multiply, divide)');
+
+        let result;
+
+        switch (e) {
+            case 'add':
+                result = 'Sum of the two numbers is: ' + add(c, d);
+                break;
+            case 'subtract':
+                result = 'Subtraction of the two numbers is: ' + subtract(c, d);
+                break;
+            case 'multiply':
+                result = 'Multiplication of the two numbers is: ' + multiply(c, d);
+                break;
+            case 'divide':
+                result = 'Division of the two numbers is: ' + divide(c, d);
+                break;
+            default:
+                result = 'Please reload';
+        }
+
+        document.write(result);
+    </script>
+</body>
+</html>
