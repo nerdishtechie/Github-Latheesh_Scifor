@@ -1,0 +1,208 @@
+1.WRITE A FUNCTION THAT TAKES A DATE OBJECT AS INPUT AND PERFORMS THE FOLLOWING OPERATIONS:
+a.GET THE CURRENT MONTH FROM THE DATE OBJECT.
+b.SET THE MONTH OF THE DATE OBJECT TO THE NEXT MONTH.
+c.SET THE DATE OF THE DATE OBJECT TO THE 15TH OF THE CURRENT MONTH.
+d.GET THE FULL YEAR OF THE ADJUSTED DATE OBJECT.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test8</title>
+</head>
+<body>
+    <script>
+    function manipulateDate(date) {
+        
+        const currentMonth = date.getMonth();
+        document.write("Current Month:", currentMonth + 1);
+        document.write('<br>')
+    
+      
+        date.setMonth(date.getMonth() + 1);
+    
+
+        date.setDate(15);
+    
+ 
+        const fullYear = date.getFullYear();
+        document.write("Full Year of Adjusted Date:", fullYear)
+      
+    
+        return date;
+    }
+    
+ 
+    let date = new Date(); 
+    let adjustedDate = manipulateDate(date);
+    document.write('<br>')
+    document.write("Adjusted Date:", adjustedDate)
+   
+</script>
+    
+</body>
+</html>
+
+2.CREATE A FUNCTION THAT TAKES AN ARRAY OF CHARACTERS AND COUNTS HOW MANY TIMES EACH CHARACTER APPEARS. RETURN AN OBJECT.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function countCharacters(charArray) {
+    const charCount = {};
+
+    for (let char of charArray) {
+        if (charCount[char]) {
+            charCount[char]++;
+        } else {
+            charCount[char] = 1;
+        }
+    }
+
+    return charCount;
+}
+
+
+const chars = ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'c'];
+const result = countCharacters(chars);
+document.write(JSON.stringify(result, null, 2));
+
+    </script>
+</body>
+</html>
+
+3.CREATE A FUNCTION NAMED REVERSEANDSORTARRAY THAT TAKES AN ARRAY OF CHARACTERS AS INPUT AND PERFORMS THE FOLLOWING OPERATIONS:
+a.REVERSE THE ORDER OF ELEMENTS IN THE ARRAY.
+b.SORT THE REVERSED ARRAY IN ALPHABETICAL ORDER.
+c.RETURN THE SORTED ARRAY.
+THE FUNCTION SHOULD REVERSE THE ARRAY FIRST AND THEN SORT IT ALPHABETICALLY BEFORE RETURNING THE FINAL SORTED ARRAY.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+         const chars = ['a', 'b', 'a', 'c', 'b', 'a', 'd', 'c'];
+        function reverseAndSortArray(charArray) {
+            document.write('The assumed array is:'+JSON.stringify(chars, null, 2));
+            document.write('<br>')
+            
+            const reversedArray = charArray.slice().reverse();
+            document.write('The reversed array is:'+JSON.stringify(reversedArray, null, 2));
+            document.write('<br>')
+            
+            const sortedArray = reversedArray.sort();
+
+           
+            return sortedArray;
+        }
+
+       
+        const result = reverseAndSortArray(chars);
+
+        
+        document.write('The sorted array is:'+JSON.stringify(result, null, 2));
+    </script>
+</body>
+</html>
+
+4.CREATE A FUNCTION NAMED FORMATSTRING THAT TAKES A STRING AS INPUT AND PERFORMS THE FOLLOWING TRANSFORMATIONS:
+a.CONVERT THE ENTIRE STRING TO UPPERCASE.
+b.CONVERT THE ENTIRE STRING TO LOWERCASE.
+c.EXTRACT A SUBSTRING FROM INDEX 2 TO 5 (INCLUSIVE).
+
+solution:
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Format String</title>
+</head>
+<body>
+    <script>
+        function formatString(inputString) {
+          
+            const upperCaseString = inputString.toUpperCase();
+
+          
+            const lowerCaseString = inputString.toLowerCase();
+
+           
+            const substring = inputString.slice(6, 11); 
+            return {
+                upperCaseString: upperCaseString,
+                lowerCaseString: lowerCaseString,
+                substring: substring
+            };
+        }
+
+       
+        const input = "Hello World";
+        const result = formatString(input);
+
+        
+        document.write(JSON.stringify(result, null, 2));
+    </script>
+</body>
+</html>
+
+
+5.CREATE A FUNCTION NAMED MANIPULATEARRAY THAT TAKES AN ARRAY OF STRINGS AS INPUT AND PERFORMS THE FOLLOWING OPERATIONS:
+a.ADD A NEW STRING "VOLVO" TO THE END OF THE ARRAY.
+b.REMOVE THE LAST ELEMENT FROM THE ARRAY.
+c.ITERATE OVER EACH ELEMENT IN THE ARRAY AND CONVERT EACH ELEMENT TO UPPERCASE.
+d.JOIN ALL ELEMENTS OF THE ARRAY INTO A SINGLE STRING SEPARATED BY COMMAS USING THE JOIN METHOD.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function manipulateArray(stringArray) {
+   
+    stringArray.push("VOLVO");
+
+    stringArray.pop();
+
+   
+    const upperCaseArray = stringArray.map(element => element.toUpperCase());
+
+    const joinedString = upperCaseArray.join(',');
+
+    return joinedString;
+}
+
+
+const cars = ["BMW", "Audi", "Mercedes"];
+const result = manipulateArray(cars);
+
+
+
+document.write(result);
+
+    </script>
+</body>
+</html>
