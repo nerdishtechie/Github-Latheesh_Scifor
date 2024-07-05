@@ -1,0 +1,125 @@
+ASSIGNMENT 9
+
+Create a simple webpage with two buttons to load data using AJAX and Fetch API from a dummy API (dummyjson.com). Display the data in a div. Style the page with basic CSS. Add comments to your code
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX and Fetch API Example</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#dataContainer {
+    margin-top: 20px;
+    text-align: left;
+}
+
+    </style>
+   
+</head>
+<body>
+    <div class="container">
+        <h1>Data Loading Example</h1>
+        <button id="ajaxButton">Load Data with AJAX</button>
+        <button id="fetchButton">Load Data with Fetch API</button>
+        <div id="dataContainer"></div>
+    </div>
+    <script>
+        // Function to load data using AJAX
+function loadDataWithAJAX() {
+    // Create a new XMLHttpRequest object
+    const xhr = new XMLHttpRequest();
+
+    // Configure it: GET-request for the URL
+    xhr.open('GET', 'https://dummyjson.com/products/1', true);
+
+    // Set up a function to run when the request is complete
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // Parse JSON data
+            const data = JSON.parse(xhr.responseText);
+            displayData(data);
+        } else {
+            console.error('Error loading data');
+        }
+    };
+
+    // Send the request
+    xhr.send();
+}
+
+// Function to load data using Fetch API
+function loadDataWithFetch() {
+    // Fetch data from the URL
+    fetch('https://dummyjson.com/products/1')
+        .then(response => response.json())
+        .then(data => {
+            displayData(data);
+        })
+        .catch(error => {
+            console.error('Error loading data', error);
+        });
+}
+
+// Function to display data in the div
+function displayData(data) {
+    // Get the data container
+    const dataContainer = document.getElementById('dataContainer');
+
+    // Clear any existing content
+    dataContainer.innerHTML = '';
+
+    // Create HTML to display the data
+    const html = `
+        <h2>${data.title}</h2>
+        <p>${data.description}</p>
+        <p>Price: $${data.price}</p>
+    `;
+
+    // Insert the HTML into the data container
+    dataContainer.innerHTML = html;
+}
+
+// Add event listeners to buttons
+document.getElementById('ajaxButton').addEventListener('click', loadDataWithAJAX);
+document.getElementById('fetchButton').addEventListener('click', loadDataWithFetch);
+
+    </script>
+    
+</body>
+</html>
