@@ -1,0 +1,163 @@
+ TEST 9:
+ 
+ CREATE AN HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE AN AJAX CALL USING XMLHTTPREQUEST.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX Call</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: black;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      button {
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        margin: 20px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #45a049;
+      }
+      #output {
+        background-color: #333;
+        padding: 20px;
+        margin-top: 20px;
+        border-radius: 5px;
+        text-align: left;
+        white-space: pre-wrap;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>AJAX Call Example</h1>
+    <button onclick="makeAJAXCall()">Load Data</button>
+    <div id="output"></div>
+
+    <script>
+      function makeAJAXCall() {
+        const xhr = new XMLHttpRequest();
+
+        xhr.open("GET", "https://dummyjson.com/products", true);
+
+        xhr.onload = function () {
+          if (xhr.status === 200) {
+            const data = JSON.parse(xhr.responseText);
+
+            let output = "<h2>Products</h2>";
+            data.products.forEach((product) => {
+              output += `
+                            <div>
+                                <h3>${product.title}</h3>
+                                <p>${product.description}</p>
+                                <p>Price: $${product.price}</p>
+                            </div>
+                            <hr>
+                        `;
+            });
+
+            document.getElementById("output").innerHTML = output;
+          } else {
+            document.getElementById("output").innerHTML = "Error loading data.";
+          }
+        };
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
+
+ 
+ CREATE A NEW HTML FILE.WRITE A JAVASCRIPT FUNCTION TO MAKE A GET REQUEST USING THE FETCH API.PARSE THE JSON RESPONSE AND DISPLAY THE DATA IN AN HTML DIV FORMAT.
+
+solution:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #output {
+            background-color: #333;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fetch API Example</h1>
+    <button onclick="makeFetchRequest()">Load Data</button>
+    <div id="output"></div>
+
+    <script>
+      
+        function makeFetchRequest() {
+            
+            fetch('https://dummyjson.com/products')
+                .then(response => {
+                  
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+                   
+                    return response.json();
+                })
+                .then(data => {
+                   
+                    let output = '<h2>Products</h2>';
+                    data.products.forEach(product => {
+                        output += `
+                            <div>
+                                <h3>${product.title}</h3>
+                                <p>${product.description}</p>
+                                <p>Price: $${product.price}</p>
+                            </div>
+                            <hr>
+                        `;
+                    });
+                    
+                    
+                    document.getElementById('output').innerHTML = output;
+                })
+                .catch(error => {
+                    
+                    document.getElementById('output').innerHTML = 'Error loading data: ' + error.message;
+                });
+        }
+    </script>
+</body>
+</html>
