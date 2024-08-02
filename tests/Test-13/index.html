@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTful API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            color:blueviolet;
+        }
+
+        p {
+            text-align: center;
+            color:crimson;
+            max-width: 600px;
+            font-weight: bolder;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 100%;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color:darkgreen;
+        }
+
+        input[type="number"], input[type="submit"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #5cb85c;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #4cae4c;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 18px;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        #result.error {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>RESTful API</h1>
+    <p>RESTful API is an interface where two computer systems securely exchange information over the internet</p>
+    <form action="" id="divisionForm">
+        <label for="num1">Enter first Integer:</label>
+        <input type="number" name="num1" id="num1"><br><br>
+        <label for="">Enter second Integer:</label>
+        <input type="number" name="num2" id="num2"><br><br>
+        <input type="submit" value="divide">
+    </form> 
+    <p id="result"></p>
+    <script>
+        document.getElementById('divisionForm').addEventListener('submit', function(event){
+            event.preventDefault();
+            const num1 = parseInt(document.getElementById('num1').value)
+            const num2 = parseInt(document.getElementById('num2').value)
+            const resultElement = document.getElementById('result')
+            try{
+                if (num2 === 0){
+                    throw new Error('Division by zero is not allowed')
+                
+                }
+                const result = num1/num2;
+                resultElement.textContent = `Result : ${result}`
+            }
+            catch(error){
+                resultElement.textContent =`Error : ${error.message}`
+            }
+        })
+    </script>
+
+</body>
+</html>
